@@ -10,7 +10,11 @@ console.log(numeroUsuario);
  */
 
 if (numeroSecreto == numeroUsuario){
-    alert(`¡Felicidades! El numero correcto es: ${numeroSecreto}`);
+  alert(`¡Felicidades! El numero correcto es: ${numeroSecreto}`);
 }else{
-    alert(`¡No has conseguido el número secreto!, el numero correcto era: ${numeroSecreto}`);
+  if(numeroSecreto > numeroUsuario){
+    alert(`El numero secreto es menor: ${numeroSecreto}`);
+  }else{
+    alert(`El numero secreto es mayor: ${numeroSecreto}`);
+  }
 }
