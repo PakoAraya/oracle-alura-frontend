@@ -1,12 +1,13 @@
-
 let numeroSecreto = 0;
 let intentos = 0;
+let listaNumerosSorteados = [];
 
 function asignarTextoElemento(elemento, texto){
   let elementoHTML = document.querySelector(elemento);
   elementoHTML.innerHTML = texto;
   return;
 }
+
 function verificarIntento(){
   let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
 
@@ -30,7 +31,16 @@ function limpiarCaja(){
 }
 
 function generarNumeroSecreto(){
-  return Math.floor(Math.random() * 10) + 1;
+  let numeroGenerado = Math.floor(Math.random() * 10) + 1;
+  console.log(numeroGenerado);
+  console.log(JSON.stringify(listaNumerosSorteados));
+  // Si el número generado está incluido en la lista, hacemos una operación, sino, otra
+  if(listaNumerosSorteados.includes(numeroGenerado)){
+    return generarNumeroSecreto();
+  }else{
+    listaNumerosSorteados.push(numeroGenerado);
+    return numeroGenerado;
+  }
 }
 
 function condicionesIniciales(){
@@ -38,20 +48,12 @@ function condicionesIniciales(){
   asignarTextoElemento('p', 'Escribe un número entre 1 y 100');
   numeroSecreto = generarNumeroSecreto();
   intentos = 1;
+  document.getElementById('reiniciar').disabled = true;
 }
 
 function reiniciarJuego(){
-  //Limpiar caja de texto
   limpiarCaja();
-  //Indicar mensajes de intervalo de numeros
-  //Generar nuevo número aleatorio
-  // Reiniciar numero de intentos
   condicionesIniciales();
-  //Deshabilitar el boton de nuevo juego
-  document.querySelector('#reiniciar').setAttribute('disabled', true);
 }
 
-condicionesIniciales();
-
-
-
+document.addEventListener('DOMContentLoaded', condicionesIniciales);
