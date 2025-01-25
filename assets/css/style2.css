@@ -7,8 +7,30 @@
 body {
   background-color: #000000;
   color: #f6f6f6;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .titulo-destaque {
   color: #22D4FD;
+}
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  margin: 10%;
+  justify-content: space-between;
+
+}
+
+.presentacion_contenido {
+  width: 615px;
+}
+
+.presentacion_contenido_titulo{
+  font-size: 36px;
+}
+
+.presentacion_contenido_texto{
+  font-size: 24px;
 }
