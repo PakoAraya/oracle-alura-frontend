@@ -13,12 +13,29 @@ body {
   color: #F6F6F6;
 }
 
+.header{
+  padding: 2% 0% 0% 15%;
+}
+
+.header_menu{
+  display: flex;
+  gap: 80px;
+}
+
+.header_menu_link{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #22D4FD;
+  text-decoration: none;
+}
+
 .titulo-destaque {
   color: #22D4FD;
 }
 
 .presentacion {
-  margin: 10% 15%;
+  padding: 5% 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,3 +92,14 @@ body {
 .presentacion_enlaces_link:hover{
   background-color: #272727;
 }
+
+.footer{
+  background-color: #22D4FD;
+  padding: 24px;
+  color : #000000;
+  text-align: center;
+  font-family : 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
