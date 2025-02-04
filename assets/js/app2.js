@@ -63,3 +63,4 @@ function reiniciarJuego(){
 }
 
 document.addEventListener('DOMContentLoaded', condicionesIniciales);
+
