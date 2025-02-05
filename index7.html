@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="/assets/img/ia.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/style7.css">
+</head>
+<body>
+  <form action="">
+    <h2>Formulario de contacto</h2>
+    <div class="form_input">
+      <label for="nombre">Nombre Completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Patrick Joe">
+    </div>
+    <div class="form_input">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="patrick.joe@example.com">
+    </div>
+    <div class="form_input">
+      <label for="telefono">Tipo de Usuario
+        <select name="type-of-user" id="opciones">
+          <option value="user1">Seguidor</option>
+          <option value="user2">Empresa</option>
+          <option value="user3">Otro</option>   
+        </select>
+      </label>
+    </div>
+    <div class="form_input">
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" placeholder="Deja tu mensaje aquí (Máximo 500 caracteres)" maxlength="500" rows="8"></textarea>
+    </div>
+
+    <div class="form_input">
+      <label for="telefono">Referencia
+        <input list="referente" name="referente">
+        <datalist id="referente" list="referente">
+          <option value="MiscelaBros">Creador de contenido Tech</option>
+          <option value="Empresas">Empresas de tecnología con quien colaboramos</option>
+          <option value="Otro">Otro contacto</option>
+        </datalist>
+      </label>
+    </div>
+
+    <div class="form_input">
+      <label for="check">Acepto los <a href="terms.html" target="blank">términos y condiciones</a>
+        <input class="checkbox" type="checkbox" name="check" id="check">
+      </label>
+        
+    </div>
+  </form>
+</body>
+</html>
