@@ -1,0 +1,46 @@
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.nav{
+  background-color: #48e;
+}
+
+.nav_list{
+  margin: 0;
+  text-align: center;
+}
+
+.nav_item{
+  display: inline-block;
+}
+
+.nav_link{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  background-color: #48e;
+}
+
+.nav_link:hover{
+  background-color: #59e;
+}
+
+.link--button{
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 4px 18px;
+  color: #48e;
+  border-radius: 3px;
+  margin-left: 60px;
+  
+}
+
+.link--button:hover{
+  background-color: transparent;
+  color: #fff;
+}
+
