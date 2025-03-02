@@ -1,0 +1,104 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  --bg-color: color-mix(in srgb, #0093bf 70%, #fff);
+  --text-color: #333;
+  --card-bg-color: #fff9;
+  --dark-color: #007ba0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body,div,ul,li,a,h1,h2,h3,h4,p{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("/assets/img/smoke2.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  height: 150dvh;
+}
+
+.text-container{
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  font-size: clamp(1rem, 8vw, 12rem);
+  color: var(--text-color);
+  font-weight: 700;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 3vw;
+  mix-blend-mode: difference;
+  animation: aparecer-texto both;
+  animation-timeline: scroll();
+  animation-range-start: cover 20%;
+}
+
+.left-text {
+  color: var(--dark-color);
+  padding-left: 4vw;
+  filter: drop-shadow(0px 0px 1px var(--dark-color)) drop-shadow(0px 0px 9px var(--dark-color));
+}
+
+.right-text{
+  font-weight: 900;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+img{
+  filter: grayscale();
+  mix-blend-mode: darken;
+  position: fixed;
+  top:0;
+  animation: aparecer both;
+  animation-timeline: scroll();
+  max-height: 100vh;
+}
+
+@keyframes aparecer{
+  0%{
+    opacity: 0;
+    filter: grayscale();
+    translate: 0 -20%;
+    scale: .7;
+  }
+  100%{
+    opacity: 1;
+    filter: grayscale();
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@keyframes aparecer-texto{
+  0%{
+    opacity: 0;
+    translate: 0 20%;
+    scale: 2;
+  }
+  100%{
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .text-container{
+    justify-content: space-evenly;
+  }
+}
